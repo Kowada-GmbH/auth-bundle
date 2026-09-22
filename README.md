@@ -4,19 +4,13 @@
 ![PHP](https://img.shields.io/badge/PHP-%3E%3D8.3-777BB4?logo=php&logoColor=white)
 ![Symfony](https://img.shields.io/badge/Symfony-%5E7.4-000000?logo=symfony&logoColor=white)
 
-Shared Symfony bundle with auth building blocks: account-status gating, login tracking, and login/logout flash messages - all wired to your own User entity via interfaces, instead of requiring a bundle-owned User class.
+Shared Symfony bundle that adds account-status gating, login tracking, and login/logout flash messages to your own User entity.
 
 The bundle is maintained here as a versioned Composer dependency and pulled into individual Symfony projects via `composer update kowada-gmbh/auth-bundle`.
 
 ## Installation
 
-Since this is a private package, the repository must be registered as a VCS repository in the consuming project:
-
-```console
-composer config repositories.kowada-auth-bundle vcs https://github.com/kowada-gmbh/auth-bundle.git
-```
-
-The package can then be required as a regular dependency:
+The package is public on [Packagist](https://packagist.org/packages/kowada-gmbh/auth-bundle) (the source itself stays proprietary, only the distribution is public) and can be required as a regular dependency:
 
 ```console
 composer require kowada-gmbh/auth-bundle ^1.0
@@ -25,6 +19,8 @@ composer require kowada-gmbh/auth-bundle ^1.0
 ## Features
 
 All classes under `Kowada\AuthBundle\` are automatically registered as services via autowiring/autoconfiguration (see [config/services.yaml](config/services.yaml)).
+
+Login/logout behavior is wired to your own User entity via interfaces, instead of requiring a bundle-owned User class.
 
 - [`Security\AccountStatusInterface`](src/Security/AccountStatusInterface.php) + [`Security\UserChecker`](src/Security/UserChecker.php): blocks login when `isEmailVerified()` or `isApproved()` return `false`.
 - [`Security\LoginTrackingInterface`](src/Security/LoginTrackingInterface.php) + [`EventListener\LoginSuccessSubscriber`](src/EventListener/LoginSuccessSubscriber.php): records the first/latest login timestamp and shows a welcome flash message.

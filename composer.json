@@ -2,7 +2,7 @@
     "name": "kowada-gmbh/auth-bundle",
     "type": "symfony-bundle",
     "license": "proprietary",
-    "description": "Shared Symfony bundle for Kowada's auth building blocks (account-status gating, login tracking, login/logout flash messages)",
+    "description": "Shared Symfony bundle that adds account-status gating, login tracking, and login/logout flash messages to your own User entity.",
     "keywords": ["symfony", "symfony-bundle", "auth", "security"],
     "minimum-stability": "stable",
     "prefer-stable": true,
