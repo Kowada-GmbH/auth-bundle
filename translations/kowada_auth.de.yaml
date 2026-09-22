@@ -1,0 +1,5 @@
+welcome_first_login: 'Herzlich Willkommen, %firstname%!'
+welcome_back: 'Willkommen zurück, %firstname%!'
+goodbye: 'Auf Wiedersehen!'
+email_not_verified: 'E-Mail-Adresse wurde noch nicht verifiziert.'
+account_not_approved: 'Account wurde noch nicht freigeschaltet.'

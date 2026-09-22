@@ -1,0 +1,5 @@
+welcome_first_login: 'Welcome, %firstname%!'
+welcome_back: 'Welcome back, %firstname%!'
+goodbye: 'Goodbye!'
+email_not_verified: 'E-mail address has not been verified yet.'
+account_not_approved: 'Account has not been approved yet.'
