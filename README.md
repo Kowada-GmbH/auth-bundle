@@ -51,7 +51,7 @@ Login/logout behavior is wired to your own User entity via interfaces, instead o
 
 ### Translations
 
-All text goes through the Symfony translator, domain `kowada_auth` ([de](translations/kowada_auth.de.yaml) / [en](translations/kowada_auth.en.yaml)). Translations are loaded automatically as soon as the translator is enabled in the consuming project (`framework.translator`) — no further configuration needed. Individual keys can be overridden in the consuming project by creating a same-named `translations/kowada_auth.<locale>.yaml` file there.
+All text goes through the Symfony translator, domain `kowada_auth` ([de](translations/kowada_auth.de.yaml) / [en](translations/kowada_auth.en.yaml)). Translations are loaded automatically — `symfony/translation` is required by this bundle, which makes FrameworkBundle enable its translator (`framework.translator`) by default, so no further configuration is needed. Individual keys can be overridden in the consuming project by creating a same-named `translations/kowada_auth.<locale>.yaml` file there.
 
 ## Development
 
